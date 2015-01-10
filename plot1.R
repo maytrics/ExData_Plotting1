@@ -1,10 +1,14 @@
 # ----------------------------------------------------------------------------
-## plot1.R
-## Author - Maytrics
+## plot1.R: Histogram for Global Active Power
+## Author: Maytrics
 ## Coursera; Exploratory Data Analysis; Course Project 1; January 2015
+## Data Distributor: UC Irvine Machine Learning Repository 
+#					 [http://archive.ics.uci.edu/ml/] 
+## Dataset for Project: Electric Power Consumption 
+#						[https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip]
 # ----------------------------------------------------------------------------
 
-# Set root directory for various data files
+# Local file with Electric Power Consumption dataset
 datafile <- "household_power_consumption.txt"
 
 # .............................................................................

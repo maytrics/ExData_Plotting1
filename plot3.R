@@ -1,10 +1,14 @@
 # ----------------------------------------------------------------------------
-## plot3.R
-## Author - Maytrics
+## plot3.R: Time vs Sub_metering 1, 2 and 3
+## Author: Maytrics
 ## Coursera; Exploratory Data Analysis; Course Project 1; January 2015
+## Data Distributor: UC Irvine Machine Learning Repository 
+#					 [http://archive.ics.uci.edu/ml/] 
+## Dataset for Project: Electric Power Consumption 
+#						[https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip]
 # ----------------------------------------------------------------------------
 
-# Set root directory for various data files
+# Local file with Electric Power Consumption dataset
 datafile <- "household_power_consumption.txt"
 
 # .............................................................................
@@ -21,11 +25,12 @@ colnames (eng.df) <- colnames (header.only)
 
 
 # .............................................................................
-# Plot 
+# Add a column that combines Date and Time
 Dates <- as.Date(eng.df$Date, format="%d/%m/%Y")
 Times <- eng.df$Time
 eng.df$DateTime <- as.POSIXct(paste(as.character(Dates),as.character(Times)))
 
+# Plot Time vs Y:Sub_metering 1, 2 and 3
 plot (x=eng.df$DateTime, y=eng.df$Sub_metering_1, ylab="Energy sub metering", xlab="", type="l")
 lines (x=eng.df$DateTime, y=eng.df$Sub_metering_2, type="l", col="red")
 lines (x=eng.df$DateTime, y=eng.df$Sub_metering_3, type="l", col="blue")
